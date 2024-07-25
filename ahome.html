@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        select,input{
+            font-size: x-large;
+            margin-top: 0.5%;
+            border: 1px solid black;
+            padding: 4px;
+        }
+    </style>
+    <script>
+        //get value
+        let i=localStorage.getItem("current_log");
+        let info=localStorage.getItem("sinfo");
+        function home()
+        {
+            let i=document.getElementById("namein").value;
+            //alert(i)
+            if(i==2)
+            {
+                document.getElementById("frame").src="rhome.html";
+            }
+            else if(i==3)
+            {
+                document.getElementById("frame").src="shhome.html";
+            }
+            else if(i==4)
+            {
+                document.getElementById("frame").src="sahome.html";
+            }
+        }
+        function comments()
+        {
+            document.getElementById("frame").src="pcomment.html";
+        }
+        function leave()
+        {
+            document.getElementById("frame").src="pleave.html";
+        }
+        function proc()
+        {
+            document.getElementById("frame").src="proc.html";
+        }
+        function logout()
+        {
+            if(confirm("Are you sure?"))
+            {
+                document.location.replace("index.html");
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <button onclick="home()">Home</button>
+        <button onclick="comments()">Comments</button>
+        <button onclick="leave()">Leave request</button>
+        <button onclick="proc()">Your proctor</button>
+        <button onclick="logout()">Logout</button>
+    </nav>
+    <div class="main">
+        <div class="name" id="name">
+          <center>  <select name="" id="namein" value="0">
+                <option value="2">Rehan Shariff</option>
+                <option value="3">Shivam</option>
+                <option value="4">Saurav</option>
+            </select>
+            <input type="button" value="Select" onclick="home()"></center>
+        </div>
+        <iframe src="" frameborder="0" id="frame" name="change" class="frame">
+            <div id="main"><h1>Welcome</h1></div>
+        </iframe>
+        <a href="google.com" target="change">ok</a>
+    </div>
+</body>
+</html>
