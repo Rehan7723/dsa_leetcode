@@ -23,7 +23,7 @@ public class DecToBin {
     {
         convert(29);
         int[] arr={1,2,5,9,2,8};
-       //System.out.println( maxRec(arr,(arr.length-1)));
+       //System.out.println( maxRec(arr,(arr.length-1)));thhghg
     }
 }
 //commit A23
