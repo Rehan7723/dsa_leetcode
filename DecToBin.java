@@ -27,3 +27,4 @@ public class DecToBin {
     }
 }
 //commit A23
+//edited
